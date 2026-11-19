@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Photo Gallery Studio</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./gallery.js"></script>
+</head>
+<body onload="addTabFocus()">
+  <div class="ambient-bg" aria-hidden="true"></div>
+
+  <main class="gallery-container">
+    <header class="gallery-header">
+      <span class="badge">WCAG &amp; Keyboard Accessible</span>
+      <h1>Accessible Interactive Photo Gallery</h1>
+      <p>Hover with your mouse or navigate with <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> to preview photos and read descriptions.</p>
+    </header>
+
+    <section class="stage-section" aria-label="Active photo preview">
+      <div id="image" role="region" aria-label="Image preview stage" aria-live="polite">
+        <span class="stage-label">Hover over an image below to display here.</span>
+      </div>
+    </section>
+
+    <section class="collection-section" aria-labelledby="collection-title">
+      <div class="collection-bar">
+        <h2 id="collection-title">Curated Collection</h2>
+        <span class="photo-count">6 Photos</span>
+      </div>
+
+      <div class="thumbnails-grid">
+        <img
+          class="preview"
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=85"
+          alt="Misty mountain valley glowing under early morning light"
+          onmouseover="upDate(this)"
+          onmouseleave="undo()"
+          onfocus="upDate(this)"
+          onblur="undo()"
+        >
+        <img
+          class="preview"
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85"
+          alt="Turquoise ocean waves rolling onto a sunny sandy shore"
+          onmouseover="upDate(this)"
+          onmouseleave="undo()"
+          onfocus="upDate(this)"
+          onblur="undo()"
+        >
+        <img
+          class="preview"
+          src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1400&q=85"
+          alt="Modern city skyline illuminated at twilight"
+          onmouseover="upDate(this)"
+          onmouseleave="undo()"
+          onfocus="upDate(this)"
+          onblur="undo()"
+        >
+        <img
+          class="preview"
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85"
+          alt="Warm sunbeams filtering through tall green forest trees"
+          onmouseover="upDate(this)"
+          onmouseleave="undo()"
+          onfocus="upDate(this)"
+          onblur="undo()"
+        >
+        <img
+          class="preview"
+          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85"
+          alt="Scenic mountain ridge overlooking a bright alpine valley"
+          onmouseover="upDate(this)"
+          onmouseleave="undo()"
+          onfocus="upDate(this)"
+          onblur="undo()"
+        >
+        <img
+          class="preview"
+          src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=85"
+          alt="Still mountain lake reflecting pine peaks at dusk"
+          onmouseover="upDate(this)"
+          onmouseleave="undo()"
+          onfocus="upDate(this)"
+          onblur="undo()"
+        >
+      </div>
+    </section>
+  </main>
+</body>
+</html>
